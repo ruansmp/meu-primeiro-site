@@ -1,0 +1,109 @@
+body {
+    background-color: #1e1e1f;
+    color: #a80000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #df0202;
+    background: linear-gradient(to top, #fd8f00, #ffee00);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+#texto-principal {
+    font-size: 18px;
+    color: #ffd000;
+    margin-bottom: 30px;
+    transition: 0.8s;
+}
+
+.meu-botao {
+    background-color: #940a21;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.8s;
+    margin-bottom: 20px;
+}
+
+.meu-botao:hover {
+    background-color: #0077ff;
+    color: #1a1a2e;
+    transform: scale(1.05);
+}
+
+.imagem-sucesso {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+/* Estilo para o campo de digitação */
+#campo-nome {
+    display: block;
+    margin: 0 auto 20px auto; /* Centraliza e cria espaço abaixo dele */
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #e94560;
+    border-radius: 8px;
+    background-color: #0f0f1e;
+    color: white;
+    outline: none; /* Remove a borda padrão do Windows ao clicar */
+    transition: 0.8s;
+    width: 250px;
+}
+
+/* Efeito visual quando o usuário clica para digitar */
+#campo-nome:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+/* Estilo do botão de alternar tema no topo */
+#botao-tema {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    border: 2px solid #e94560;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+/* =======================================================
+   A MÁGICA DO TEMA CLARO:
+   Quando a classe "tema-claro" for adicionada ao body,
+   as regras abaixo vão ignorar as antigas e mudar as cores.
+   ======================================================= */
+body.tema-claro {
+    background-color: #f0f2f5; /* Fundo cinza bem claro */
+    color: #1a1a2e; 
+    transition: 0.8s;           /* Texto escuro para dar contraste */
+}
+
+body.tema-claro #texto-principal {
+    color: #4a4a6a;            /* Texto secundário em um tom cinza escuro */
+}
+
+body.tema-claro #campo-nome {
+    background-color: #ffffff; /* Fundo do campo de texto branco */
+    color: #1a1a2e;            /* Texto digitado escuro */
+    border-color: #4a4a6a;
+}
+
+body.tema-claro #botao-tema {
+    background-color: #1a1a2e; /* O botão do tema inverte as cores também */
+    color: #929292;
+}
